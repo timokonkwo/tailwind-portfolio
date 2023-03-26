@@ -10,6 +10,8 @@ import { motion } from "framer-motion";
 // Variant
 import { fadeIn } from "../variants";
 
+import aboutImg from "../assets/about.png"
+
 const About = () => {
 	const [ref, inView] = useInView({
 		threshold: 0.5,
@@ -25,8 +27,10 @@ const About = () => {
 						initial="hidden"
 						whileInView={"show"}
 						viewport={{ once: false, amount: 0.3 }}
-						className="flex-1 bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top"
-					></motion.div>
+						className="flex-1 h-[640px] mix-blend-lighten bg-top"
+					>
+						<img src={aboutImg} alt="" />
+					</motion.div>
     
 					{/* Text */}
 					<motion.div
